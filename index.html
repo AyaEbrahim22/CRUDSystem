@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="w-75 m-auto bg-info rounded mt-4 p-4">
+
+        <h1 class="text-center">CRUD System</h1>
+
+        <div>
+            <label for="productNameInput">Product Name:</label>
+            <input class="form-control" type="text" id="productNameInput">
+        </div>
+
+        <div>
+            <label for="productPriceInput">Product Price:</label>
+            <input class="form-control" type="number" id="productPriceInput">
+        </div>
+
+        <div>
+            <label for="productCategoryInput">Product Category:</label>
+            <input class="form-control" type="text" id="productCategoryInput">
+        </div>
+
+        <div>
+            <label for="productDescriptionInput">Product Description:</label>
+            <textarea class="form-control" id="productDescriptionInput"></textarea>
+        </div>
+
+        <button onclick="addProduct()" class="btn btn-primary mt-3 w-100" id="addBtn">Add Product</button>
+
+        <button onclick="updateItem()" class="btn btn-primary mt-3 w-100 d-none" id="updateBtn">Update Product</button>
+
+        <input oninput="search()" type="search" class="form-control mt-3 w-50 m-auto" id="searchInput" placeholder="Search by Name...">
+
+        <table class="table my-3 text-center">
+
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody">
+    
+               
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
